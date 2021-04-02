@@ -1,4 +1,6 @@
-$(function(){
+
+//Using the Focus() and Blur() event
+$($(function(){
   let inputFields = $("input:text, input:password, textarea");
 
   inputFields.focus(function(){
@@ -24,5 +26,30 @@ $(function(){
 
   })
 
+
+});)
+
+//Using the change event 
+$(function () {
+
+  // The change event is used for input elements such as checkboxes, radio button and select tags. They fire whenever the selection changes.
+
+  // Add green indicator when checkbox is checked and red one otherwise.
+  $("#checkbox").change(function() {
+    var isChecked = $(this).is(":checked");  // or .prop("checked")
+
+    if (isChecked) {
+   
+      $(this).add("label[for='checkbox']").css("box-shadow", "0 0 4px #181");
+    } else {
+      $(this).add("label[for='checkbox']").css("box-shadow", "0 0 4px #811");
+    }
+  });
+
+  //Mini Challenge! Add a select element to your html for options. When the value changes, alert with that element you selected. 
+  $("#selection").change(function() {
+    var chosen = $(this).find(":selected").text();
+    alert(chosen);
+  });
 
 });
