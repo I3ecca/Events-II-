@@ -56,7 +56,7 @@ $(function() {
     let chosen = $(this).find(":selected").text();
     console.log(chosen);
 
-    alert(chosen);
+    alert(`You have selected ${chosen}!`);
   });
 
 });
