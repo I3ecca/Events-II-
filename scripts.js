@@ -52,11 +52,27 @@ $(function() {
 
 
   $("#selection").change(function() {
-    //The :selected selector works for <option> elements. It does not work for checkboxes or radio inputs; use :checked for them.
+    //The :selected selector works for <option> elements. It does not work for checkboxes or radio inputs; use :checked for them. :selected is a psuedo selector in JQuery that represents all the selected options. In this case we get the one selected option.
     let chosen = $(this).find(":selected").text();
     console.log(chosen);
 
     alert(`You have selected ${chosen}!`);
   });
 
+});
+
+//Handling the Submit Event
+$(function(){
+  //using the submit() method in JQuery, you can check to make sure that a form is completed before a user submits it. S
+  $("#form").submit(function(event){
+    let textarea = $("#message");
+    // If the textarea( after trimming) is equal to nothing, let them know!
+    if (textarea.val().trim() === ""){
+      textarea.css("box-shadow", "0 0 4px #811");
+      alert("please complete the form message");
+      event.preventDefault();
+    } else {
+      //form will be submitted. 
+    }
+  })
 });
