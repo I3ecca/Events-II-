@@ -52,7 +52,10 @@ $(function() {
 
 
   $("#selection").change(function() {
+    //The :selected selector works for <option> elements. It does not work for checkboxes or radio inputs; use :checked for them.
     let chosen = $(this).find(":selected").text();
+    console.log(chosen);
+
     alert(chosen);
   });
 
