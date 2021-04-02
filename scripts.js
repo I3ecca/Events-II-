@@ -10,7 +10,7 @@ $(function(){
     $(this).css("box-shadow", "none");
   })
 
-  // Mini Challenge! Use theblurr event to check if the name has at least 3 characters. If it does not have at least 3 characters, you let the user know by making the focus red. Make a green box shadow if everything is correct. 
+  // Mini Challenge! Use the blur() event to check if the name has at least 3 characters. If it does not have at least 3 characters, you let the user know by making the focus red. Make a green box shadow if everything is correct. 
 
 
 // this is basic form validation
