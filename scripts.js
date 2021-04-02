@@ -26,16 +26,18 @@ $($(function(){
 
   })
 
-
-});)
+}));
 
 //Using the change event 
-$(function () {
+$(function() {
 
-  // The change event is used for input elements such as checkboxes, radio button and select tags. They fire whenever the selection changes.
+  // The change event occurs when the value of an element has been changed (only works on <input>, <textarea> and <select> elements).
 
-  // Add green indicator when checkbox is checked and red one otherwise.
+  //The change() method triggers the change event, or attaches a function to run when a change event occurs.
+
+
   $("#checkbox").change(function() {
+    //The is() method checks if one of the selected elements matches the selectorElement.
     var isChecked = $(this).is(":checked");  // or .prop("checked")
 
     if (isChecked) {
@@ -47,8 +49,10 @@ $(function () {
   });
 
   //Mini Challenge! Add a select element to your html for options. When the value changes, alert with that element you selected. 
+
+
   $("#selection").change(function() {
-    var chosen = $(this).find(":selected").text();
+    let chosen = $(this).find(":selected").text();
     alert(chosen);
   });
 
